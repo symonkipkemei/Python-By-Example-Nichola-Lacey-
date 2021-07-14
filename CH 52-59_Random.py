@@ -53,8 +53,10 @@ if userOption == computerChoice:
 else:
     print("Bad luck")
 
-print("the computer selected", computerChoice)
-
+if computerChoice == "h":
+    print("The computer selected heads")
+else:
+    print("The computer selected tails")
 
 '''
 055
@@ -110,18 +112,33 @@ pick again
 
 '''
 
-print('''
+print('''CH 057-
 Let\'s compete between the computer and you and see
 if you stand a chance of picking the same number
 randomly picked by the computer\n''')
+
 wholeNum = random.randint(1, 10)
-userNum = int(input("please input a number:"))
-while userNum != wholeNum:
-    userNum = int(input("please insert another number:"))
+# userNum = int(input("please input a number:"))
+correct = False
+# while userNum != wholeNum:
+
+# while not  is similar to correct == false
+while not correct:
+    userNum = int(input("please insert a number:"))
     if userNum < wholeNum:
         print("too low")
-    else:
+        correct = False
+    elif userNum > wholeNum:
         print("too high")
-else:
-    print("you picked the correct number")
+        correct = False
+
+    elif userNum == wholeNum:
+        print("you picked the correct number")
+        correct = True
+
+
+# Having two inputs by the user  as per code line 121 & 123 denies us
+# the chance of testing the first input to check if it is too low or too high.
+# instead let us replace it with a boolean condition statement
+
 
