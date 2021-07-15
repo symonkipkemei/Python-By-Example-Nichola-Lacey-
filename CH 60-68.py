@@ -57,10 +57,26 @@ for x in range(0,3):
         turtle.right(90)
     turtle.end_fill()
 
-turtle.exitonclick()
 
 # turtle begin and end fill go hand in hand
 
+
+'''
+064
+Draw a five-pointed
+star.
+
+'''
+
+turtle.color("black", "red")
+turtle.begin_fill()
+turtle.color("black", "red")
+for y in range(0, 5):
+    turtle.left(144)
+    turtle.forward(50)
+
+    turtle.forward(50)
+turtle.end_fill()
 
 
 
