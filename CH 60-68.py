@@ -79,4 +79,58 @@ for y in range(0, 5):
 turtle.end_fill()
 
 
+'''
+066
+Draw an octagon that uses a different colour (randomly
+selected from a list of six possible colours) for each line.
+'''
+import random
+
+colors = random.choice(["red", "green", "yellow", "blue", "green"])
+turtle.begin_fill()
+turtle.color("black", colors)
+for d in range(0, 8):
+    turtle.forward(50)
+    turtle.right(45)
+turtle.end_fill()
+
+
+'''
+067
+Create the following pattern:
+
+'''
+
+
+for x in range(0, 16):
+    turtle.right(30)
+    colors = random.choice(["red", "green", "yellow", "blue", "green"])
+    turtle.begin_fill()
+    turtle.color("black", colors)
+    for d in range(0, 8):
+        turtle.forward(50)
+        turtle.right(45)
+    turtle.end_fill()
+
+
+'''
+068
+Draw a pattern that will change each time the
+program is run. Use the random function to pick
+the number of lines, the length of each line and
+the angle of each turn.
+
+'''
+numberOfLines = random.randint(0, 9)
+lengthOfLines = random.randint(10, 30)
+angle = random.randint(0, 180)
+color = random.choice(["red", "blue", "orange", "green", "purple", "black"])
+
+for x in range(0, numberOfLines):
+    turtle.begin_fill()
+    turtle.color(color)
+    turtle.forward(lengthOfLines)
+    turtle.right(angle)
+    turtle.end_fill()
+
 
