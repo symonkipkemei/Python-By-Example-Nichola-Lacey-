@@ -33,3 +33,34 @@ for x in range(0, 360):
     turtle.forward(1)
     turtle.right(1)
 
+'''
+063
+Draw three squares
+in a row with a gap
+between each. Fill
+them using three
+different colours.
+'''
+
+# use for loop to iterate the three squares
+import random
+for x in range(0,3):
+    turtle.penup()
+    turtle.forward(100)
+    turtle.pendown()
+    turtle.shape("turtle")
+    turtle.begin_fill()
+    color = random.choice(["red", "blue", "green", "yellow"])
+    turtle.color("black", color)
+    for y in range(0, 4):
+        turtle.forward(50)
+        turtle.right(90)
+    turtle.end_fill()
+
+turtle.exitonclick()
+
+# turtle begin and end fill go hand in hand
+
+
+
+
