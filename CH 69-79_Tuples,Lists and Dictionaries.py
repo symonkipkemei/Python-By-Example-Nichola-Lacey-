@@ -32,9 +32,36 @@ if 0 <= userNo <= 4:
 else:
     print("Number out of range")
 
+'''
+071
+Create a list of two sports. Ask the
+user what their favourite sport is and
+add this to the end of the list. Sort the
+list and display it.
 
+'''
 
+sports = ["football", "basketball"]
+userSport = input("what is your favorite sport?")
 
+sports.append(userSport)
 
+print(sorted(sports))
+
+'''
+072
+Create a list of six school subjects. Ask the user which of these
+subjects they don’t like. Delete the subject they have chosen from the
+list before you display the list again.
+'''
+
+subjects = ["Maths", "English", "history", "Geography", "Chemistry"]
+print(subjects)
+subjectDislike = input("which subject don\'t you like?: ")
+# list followed by an attribute (index) then when you insert the name of the item, you get the index of the item
+index = subjects.index(subjectDislike)
+del subjects[index]
+
+print(subjects)
 
 
