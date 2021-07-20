@@ -11,10 +11,8 @@ for y in range(0, 4):
     name = input("Input your name: ")
     age = input("Input your age: ")
     shoeSize = input("Input your shoe size: ")
+    listA[name] = {"age": age, "shoeSize": shoeSize}
+    # this line of code updates the dict with a new pair of key and data
 
-    nameSet1 = {name: {"age": age, "shoeSize": shoeSize}}
-
-listA[name] = {"age": age, "shoeSize": shoeSize}
-
-
+print(listA)
 
