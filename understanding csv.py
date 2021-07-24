@@ -4,7 +4,7 @@ import csv
 
 # just like text or any other external file , you first have to open the file
 # we can assign the open file to a variable for ease of reference
-file = open("testing.csv", "w")
+file = open("testing.csv", "a")
 
 # Writing to a csv file
 
@@ -35,12 +35,13 @@ print("Let's try displaying this information differently\n")
 file.close()
 
 # TRYING PRINTING WITH LOOP
+# the code below loops through each row and print each individually
 
-
-# the code highlighted below does not work.Will explore and find why
-'''
 file = open("testing.csv", "r")
 for y in file:
     print(y)
-'''
+
+
+
+
 
