@@ -31,5 +31,5 @@ dataset = open("Books.csv", "r")
 print(dataset)
 for row in dataset:
     print(row)
-
 dataset.close()
+

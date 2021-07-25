@@ -7,7 +7,7 @@ Create a .csv file that will store the following data. Call it “Books.csv”.
 
 import  csv
 
-dataset = open("Books.csv", "w")
+dataset = open("Books.csv", "x")
 for index, x in enumerate(range(1, 6)):
     print("Book no", index)
     title = input("Input title of book: ")
@@ -16,3 +16,5 @@ for index, x in enumerate(range(1, 6)):
     info = title + "," + author + "," + year + "\n"
     dataset.write(str(info))
 dataset.close()
+
+
