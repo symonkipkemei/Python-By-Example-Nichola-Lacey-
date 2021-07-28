@@ -28,16 +28,26 @@ bookRows = list(reader)
 for rows, index in enumerate(bookRows):
     print("No", rows, "-", index)
 
+
+# deleting a row
+delRow = int(input("which row number would you like to delete: "))
+del bookRows[delRow]
+
+# display the list again
+
+for rows, index in enumerate(bookRows):
+    print("No", rows, "-", index)
+
 # create a tmp list
+# in order to alter the list
+
 tmp = []
 for row in bookRows:
     tmp.append(row)
 
-# user changing the data
-correct = False
-while not correct:
+print(tmp)
 
-    changeRow = input("which row No would you like to change: ")
-    for rows[int(changeRow)] in bookRows:
+# altering data in a list
+
 
 
