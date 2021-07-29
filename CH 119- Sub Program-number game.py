@@ -52,6 +52,9 @@ def checkIfGuess(compNum, userGuess):
         return False
 
 
+# PROGRAM 4: (The connector) loops through and connects variables from different programs.
+# this is the heart of the project whereas the consumer is the brain of the project.
+
 def main():
     compNum = getUser()
     correct = False
