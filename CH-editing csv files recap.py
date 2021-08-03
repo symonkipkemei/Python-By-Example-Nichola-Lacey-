@@ -6,7 +6,7 @@
 # we are going to store this information
 # and then edit the ID of one of the users
 
-# a sub program that collects data information( Go getter0
+# a sub program that collects data information( Go getter)
 
 
 def getInfo():
@@ -20,8 +20,7 @@ def getInfo():
 # a consumer sub programme that picks the values and stores in a csv file
 def savecsv(name, ID, income):
     file = open("formode.csv", "a")
-    # when retrieving data stored in a tuple, you call the sub programme and not the tuple variable.
-    # for instance as shown in the line of code below
+
     record = str(name) + "," + str(ID) + "," + str(income) + "\n"
     file.write(record)
     file.close()
@@ -37,7 +36,7 @@ def reader():
         print(x)
 
 
-# A sub program thet enumerates all the available data and sak user which row he/she wants to delete
+# A sub program that enumerates all the available data and asks the user which row he/she wants to delete
 # we will use insert and remove functions to remove an entire row and replace with a new one within the same position
 # this is a masterstroke!
 
@@ -45,13 +44,21 @@ def choose():
     # enumeration of all rows in the csv
     import csv
     file = open("formode.csv", "r")
+    # converting into an iterable
     read = csv.reader(file)
+    # listing the iterables into a 2d list
     read = list(read)
+    # list all rows in 2d list one by one
     for index, x in enumerate(read):
         print(index, x)
+    file.close()
 
     # creation of empty list to store our data temporarily
     tmp = []
+    # copying files in a csv to a temporary list
+    file = open("formode.csv", "r")
+    read = csv.reader(file)
+    read = list(read)
     for x in read:
         tmp.append(x)
     file.close()
@@ -65,19 +72,20 @@ def choose():
     change = change.lower()
     if change == "s":
         NewSurname = input("enter the new surname: ")
-        newRecord = str(NewSurname) + "," + str(read[editRow][1]) + "," + str(read[editRow][2]) + "\n"
-        del tmp[editRow]
+        newRecord = str(NewSurname) + "," + tmp[editRow][1] + "," + tmp[editRow][2] + "\n"
+        del tmp[editRow][0]
         tmp.insert(editRow, newRecord)
 
     elif change == "i":
         NewID = input("enter the new ID: ")
-        newRecord = str(read[editRow][0]) + "," + str(NewID) + "," + str(read[editRow][2]) + "\n"
+        newRecord = tmp[editRow][0] + "," + str(NewID) + "," + tmp[editRow][2] + "\n"
         del tmp[editRow]
         tmp.insert(editRow, newRecord)
 
     elif change == "c":
         NewSalary = input("enter the new contribution: ")
-        newRecord = str(read[editRow][0]) + "," + str(read[editRow][1]) + "," + str(NewSalary) + "\n"
+        newRecord = tmp[editRow][0] + "," + tmp[editRow][1] + "," + str(NewSalary) + "\n"
+        del tmp[editRow]
         tmp.insert(editRow, newRecord)
 
     else:
@@ -87,9 +95,11 @@ def choose():
     file = open("formode.csv", "w")
     # a csv file only accepts string as an argument and not list
     # convert list to a string
+    x = 0
     for row in tmp:
-        record = str(row[0]) + "," + str(row[1]) + "," + str(row[2]) + "\n"
+        record = tmp[x][0] + "," + tmp[x][1] + "," + tmp[x][2] + "\n"
         file.write(record)
+        x += 1
     file.close()
 
 
@@ -108,6 +118,8 @@ def main():
         userOption = int(input("Choose one option: "))
 
         if userOption == 1:
+            # when retrieving data stored in a tuple, you call the sub programme and not the tuple variable.
+            # for instance as shown in the line of code below
             name, ID, income = getInfo()
             savecsv(name, ID, income)
             correct = False
