@@ -25,3 +25,5 @@ newRecord = name + "," + grade + "," + name + "," + comments + "\n"
 file.write(str(newRecord))
 file.close()
 
+
+
