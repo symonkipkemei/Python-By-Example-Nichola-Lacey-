@@ -73,7 +73,7 @@ for index, row in enumerate(books):
 
 # confirm if everything is well appended to the list
 print("This is to confirm if everything was well appended\n"
-      "into our temporary list")
+      "into our temporary list\n")
 for row in tmp:
     print(row)
 
@@ -100,6 +100,6 @@ print("Bombooclaat!\n"
       "cheers!")
 
 
-#file = open("Books.csv", "r")
-#for row in file:
-    #print(row)
+file = open("Books.csv", "r")
+for row in file:
+    print(row)
