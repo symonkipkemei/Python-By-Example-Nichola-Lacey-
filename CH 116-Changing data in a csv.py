@@ -10,17 +10,37 @@ existing data with the amended data.
 import csv
 
 file = open("Books.csv", "r")
-rowBooks = list(csv.reader(file))
+
+# converting csv into an iterable and 2D Listing
+books = list(csv.reader(file))
 
 tmp = []
+# displaying available books
+print("The following database contains the following ", len(books), "publications,\nGo through each and make "
+                                                                    "your necessary "
+                                                                    "changes.\n")
+for index, row in enumerate(books):
+    print(index, row)
 
-print("The following database contains the following ", len(rowBooks), "publications,\nGo through each and make "
-                                                                       "your necessary "
-                                                                       "changes.")
-# loop through the entire database
 
-for index, row in enumerate(rowBooks):
-    print("Would you like too change ", index, "-", row, "?")
+# DELETING A ROW FROM THE DATABASE
+
+# deleting a row
+delRow = int(input("\nwhich row number would you like to delete:"))
+del books[delRow]
+
+# display the list again
+
+print("\nRow", str(delRow), "deleted, Below is the new list\n")
+
+for rows, index in enumerate(books):
+    print("No", rows, "-", index)
+
+# AMENDING DATA IN A CSV FILE
+
+# loop through the entire database scanning for areas the editor wants to make changes
+for index, row in enumerate(books):
+    print("\nWould you like too change ", index, "-", row, "?")
     rowChange = input("(Y)es or (N)o:  ")
     rowChange = rowChange.upper()
 
@@ -52,8 +72,16 @@ for index, row in enumerate(rowBooks):
         print("wrong data input")
 
 # confirm if everything is well appended to the list
+print("This is to confirm if everything was well appended\n"
+      "into our temporary list")
 for row in tmp:
     print(row)
+
+# let's now close the file we opened to make changes
+file.close()
+
+
+# APPENDING THE CHANGES MADE TO THE CSV FILE
 
 # lets now append the changes to our csv database
 # by overriding the existing list with the new changes
@@ -64,9 +92,14 @@ for row in tmp:
     file.write(row)
 file.close()
 
-
 # reading the csv file we just appended
 
-file = open("Books.csv", "r")
-for row in file:
-    print(row)
+print("Bombooclaat!\n"
+      "Below is the list we just ammended the changes\n"
+      "Go through it and affirm that all the changes made are consistent to your inputs\n"
+      "cheers!")
+
+
+#file = open("Books.csv", "r")
+#for row in file:
+    #print(row)

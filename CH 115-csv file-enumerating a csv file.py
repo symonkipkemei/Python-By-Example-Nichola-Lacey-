@@ -1,5 +1,4 @@
 '''
-
 115
 Using the Books.csv file, display the data in
 the file along with the row number of each
@@ -15,5 +14,4 @@ books = list(reader)
 
 for index, chapter in enumerate(books):
     print("No", index, chapter)
-
 

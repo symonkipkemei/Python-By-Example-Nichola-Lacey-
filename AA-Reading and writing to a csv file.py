@@ -1,4 +1,4 @@
-# you need to first import csvfor it to work
+# you need to first import csv for it to work
 
 
 file = open("Graduation.csv", "w")
@@ -12,7 +12,7 @@ file.close()
 
 
 
-#when you wat to add files without deleting,
+# when you want to add files without deleting,
 # we will use the append command
 
 file = open("Graduation.csv", "a")
@@ -25,6 +25,6 @@ newRecord = name + "," + grade + "," + name + "," + comments + "\n"
 file.write(str(newRecord))
 file.close()
 
-
-
 # did not  do much today.I will try again tomorrow
+
+

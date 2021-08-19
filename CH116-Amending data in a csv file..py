@@ -18,11 +18,9 @@ file = open("Books.csv", "r")
 
 # use csv reader to convert rows in books into iterables
 import csv
-
 reader = csv.reader(file)
 
 # List the iterables using the list constructor
-
 bookRows = list(reader)
 # display list to user
 for rows, index in enumerate(bookRows):
@@ -44,7 +42,7 @@ for rows, index in enumerate(bookRows):
 tmp = []
 for row in bookRows:
     tmp.append(row)
-
+print("\n")
 print(tmp)
 
 # altering data in a list

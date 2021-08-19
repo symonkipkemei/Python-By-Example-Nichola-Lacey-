@@ -55,4 +55,4 @@ file.close()
 # An interesting way of imitating while loop
 # if this action happens we will add the variable by one
 # thus it will stop
-# if it does happen it remains 0 and thefore we can assign a message for conditions not met
+# if it does happen it remains 0 and therefore we can assign a message for conditions not met
