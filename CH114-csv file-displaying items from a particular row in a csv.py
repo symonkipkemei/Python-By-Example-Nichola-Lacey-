@@ -21,17 +21,24 @@ between those two years.
 # and compare if it meets the condition.
 
 
-# input
 
-startYear = int(input("Please input a starting year: "))
-endYear = int(input("Please input a ending year: "))
 
 file = open("Books.csv", "r")
 # converting csv into an iterable
 reader = csv.reader(file)
+
+#printing
+
+print("Hello, the following books are present in my repository: ")
 # listing the iterables
 books = list(reader)
-print(books)
+for oneBook in books:
+    print(oneBook)
+
+# input
+print("\nI will be displaying all the books \nwithin the range of the years you decide.\n")
+startYear = int(input("Please input a starting year: "))
+endYear = int(input("Please input a ending year:"))
 
 # establishing the range between the user choices
 x = range(startYear, endYear)

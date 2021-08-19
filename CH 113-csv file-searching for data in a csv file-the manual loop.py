@@ -48,7 +48,8 @@ for row in file:
         count += 1
 if count == 0:
     print("Hello dear one, there is no search an author.")
-
+# the count variable summarises all the ..
+# no their is no search an author in every row into one statement after the end of the search
 file.close()
 
 # An interesting way of imitating while loop

@@ -1,6 +1,4 @@
 '''
-
-
 Create a .csv file that will store the following data. Call it “Books.csv”.
 '''
 
