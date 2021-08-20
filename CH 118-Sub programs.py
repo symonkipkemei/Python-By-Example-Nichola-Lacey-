@@ -35,3 +35,7 @@ main()
 
 
 # the return key allows data to be retrieved by one programme and used by another.
+
+# beating time before 24 hours end.
+# considering to start my day wit coding instead of ending it with code
+# we will try tomorrow and see how it goes
