@@ -49,6 +49,7 @@ def getName():
 def changeName():
     chName = input("Insert name you will like to change: ")
     if chName in nameList:
+        #perfecto!
         index = int(nameList.index(chName))
         nameList.remove(chName)
         newName = input("Insert new name:")

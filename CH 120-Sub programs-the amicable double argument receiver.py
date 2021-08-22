@@ -34,7 +34,7 @@ print("(1) Addition\n"
 userInput = int(input("Enter 1 0r 2 : "))
 
 
-# SUB PROGRAM A (a consumer)
+# SUB PROGRAM A (Go getters)
 # Generate two random numbers btw 5 and 20
 # Generate an addition question for the user
 # get user answer of the question
@@ -48,6 +48,7 @@ def addition():
     correctAnsAdd = numA + numB
     userAnsAdd = int(input(str(numA) + "+" + str(numB) + "= :"))
     ansAdd = (correctAnsAdd, userAnsAdd)
+    # Return function can only return one value, we therefore store it in a tuple
     return ansAdd
 
 
