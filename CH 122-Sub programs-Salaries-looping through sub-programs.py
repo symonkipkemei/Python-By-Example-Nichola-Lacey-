@@ -1,11 +1,14 @@
 '''
-In Python, it is not technically possible to directly
-delete a record from a .csv file. Instead you need
-to save the file to a temporary list in Python,
-make the changes to the list and then overwrite
-the original file with the temporary list.
-Change the previous program to allow you to do
-this. Your menu should now look like this:
+122
+Create the following menu:
+If the user selects 1, allow them to add to a file
+called Salaries.csv which will store their name
+and salary. If they select 2 it should display all
+records in the Salaries.csv file. If they select 3 it
+should stop the program. If they select an
+incorrect option they should see an error
+message. They should keep returning to the
+menu until they select option 3.
 '''
 
 # create a salaries csv
@@ -21,6 +24,7 @@ def getUser():
     file = open("salaries.csv", "a")
     newRecord = name + "," + salaries + "\n"
     file.write(newRecord)
+    file.close()
 
 
 def view():
@@ -32,42 +36,7 @@ def view():
     salaList = list(reader)
     for x in salaList:
         print(x)
-
-def deleteRecord():
-    import csv
-    # open csv and
-    file = open("salaries.csv", "r")
-
-    # converting into an iterable
-    reader = csv.reader(file)
-
-    # listing the iterable
-    salaList = list(reader)
-
-    # create a temporary list
-    tmp = []
-
-    # Enumerate row and display each row alongside its index
-    # ask user the index of row he/she wants to delete
-    # copying list to a temporary list (tmp)
-
-    for index, x in enumerate(salaList):
-        print(index,x)
     file.close()
-    userRow = int(input("which row do you want to delete?: "))
-
-    #file open csv
-    # copy to a list and delete the specified row by the user
-    # append the list and overwrite the csv file
-
-    file = open("salaries.csv", "r")
-    reader = csv.reader(file)
-    salaList = list(reader)
-    for x in salaList:
-        del x[userRow]
-        print(x)
-
-    print(salaList)
 
 
 def main():
@@ -79,8 +48,7 @@ def main():
             print("Salaries Display\n"
                   "(1)Add to a file\n"
                   "(2)View all records\n"
-                  "(3)Delete a record\n"
-                  "(4)Quit program")
+                  "(3)Quit program\n")
             userInput = (input("Please enter your selection: "))
 
             if int(userInput) == 1:
@@ -88,8 +56,6 @@ def main():
             elif int(userInput) == 2:
                 view()
             elif int(userInput) == 3:
-                deleteRecord()
-            elif int(userInput) == 4:
                 print("Thank you for participating. The game has ended!")
                 correct = True
             else:
