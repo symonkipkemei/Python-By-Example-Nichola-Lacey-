@@ -1,15 +1,16 @@
 # Sub programs
-# These are blocks of code that enable us to break programmes into small chance\
+# These are blocks of code that enable us to break programmes into small chunks
 # it makes it easier to deal with repetitive tasks like
 
 # Welcoming your user
 # Asking the user to input his/her name
 
-def welcome():
+
+
+# SUB PROGRAMME A
+
+def karibu():
     print("Welcome to my programme !")
-
-
-welcome()
 
 # The first programme ask for the user name
 def userName():
@@ -27,6 +28,7 @@ def welcome(user):
 # the variable is then declared as an argument to the second programme for it to run
 
 def main():
+    karibu()
     kipchumba = userName()
     welcome(kipchumba)
 
@@ -36,6 +38,3 @@ main()
 
 # the return key allows data to be retrieved by one programme and used by another.
 
-# beating time before 24 hours end.
-# considering to start my day wit coding instead of ending it with code
-# we will try tomorrow and see how it goes

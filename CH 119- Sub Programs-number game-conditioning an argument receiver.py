@@ -38,18 +38,22 @@ def guess():
     return userGuess
 
 
-# PROGRAM 3: (The consumer) check if user guess is same as computer guess
+# PROGRAM 3: (The consumer/the argument receiver) check if user guess is same as computer guess
+# all conditional statements are run through this sub programme
 
 def checkIfGuess(compNum, userGuess):
-    if compNum == userGuess:
-        print("Correct, you guessed correctly")
-        return True
-    elif userGuess > compNum:
-        print("Too High")
-        return False
-    elif userGuess < compNum:
-        print("Too low")
-        return False
+    correct = False
+    while not correct:
+        if compNum == userGuess:
+            print("Correct, you guessed correctly")
+            correct = True
+        elif userGuess > compNum:
+            print("Too High")
+            userGuess = int(input("Guess the number am thinking of again: "))
+            # acts as a mediator between a continuous loop and new user answer
+        elif userGuess < compNum:
+            print("Too low")
+            userGuess = int(input("Guess the number am thinking of again: "))
 
 
 # PROGRAM 4: (The connector) loops through and connects variables from different programs.
@@ -57,13 +61,11 @@ def checkIfGuess(compNum, userGuess):
 
 def main():
     compNum = getUser()
-    correct = False
-    while not correct:
-        userGuess = guess()
-        if checkIfGuess(compNum, userGuess):
-            correct = True
-        else:
-            correct = False
+    userGuess = guess()
+    checkIfGuess(compNum, userGuess)
 
+
+# The rule of thumb is that the main programme is only a compiler .
+# Therefore, sort all your relations at the go getter and the argument receiver level.
 
 main()
