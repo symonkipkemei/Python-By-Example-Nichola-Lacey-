@@ -12,9 +12,17 @@ between 1 to 6
 (inclusive).
 """
 
-
 from tkinter import *
 import random
+
+
+# create an action on pressing the button
+def dice():
+    num = random.randint(1, 6)
+    textBox1["bg"] = "red"
+    textBox1["fg"] = "white"
+    textBox1["text"] = num
+
 
 # create an instance of tkinter
 win = Tk()
@@ -25,18 +33,17 @@ win.title("Dice")
 win["bg"] = "black"
 
 
-# create an action on pressing the button
-def dice():
-    num = random.randint(1, 6)
-    msg = Message(text=num)
-    msg.place(x=160, y=100, width=100, height=30)
-    msg["bg"] = "white"
-    msg["fg"] = "black"
-    msg["relief"] = "sunken"
-
-
 # button
 bt = Button(text="dice me", command=dice)
 bt.place(x=160, y=50, width=100, height=30)
+
+# textbox1
+
+textBox1 = Message(text="")
+textBox1.place(x=160, y=100, width=100, height=30)
+textBox1["bg"] = "white"
+textBox1["fg"] = "black"
+textBox1["relief"] = "sunken"
+
 # run
 win.mainloop()

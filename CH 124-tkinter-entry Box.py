@@ -12,6 +12,15 @@ message box
 
 from tkinter import *
 
+
+def call():
+    name = textBox1.get()
+    msg = str("hello " + name)
+    textBox2["bg"] = "red"
+    textBox2["fg"] = "white"
+    textBox2["text"] = msg
+
+
 # create an instance of tkinter
 win = Tk()
 
@@ -19,24 +28,20 @@ win = Tk()
 win.geometry("800x500")
 win.title("hello user")
 
-# create a blank entry box
-ent = Entry(text=0)
-ent.place(x=50, y=50, width=100, height=30)
+# create textbox1(Data ENTRY)
 
-
-# create an action on pressing the button
-
-def press():
-    name = ent.get()
-    msg = Message(text="hello " + name)
-    msg.place(x=160, y=100, width=100, height=30)
-    msg["bg"] = "white"
-    msg["fg"] = "black"
-    msg["relief"] = "sunken"
-
+textBox1 = Entry(text="")
+textBox1.place(x=50, y=50, width=100, height=30)
+textBox1["justify"] = "center"
+textBox1.focus()
 
 # button
-bt = Button(text="press me", command=press)
+bt = Button(text="press me", command=call)
 bt.place(x=160, y=50, width=100, height=30)
+
+# create textbox2
+textBox2 = Message(text="")
+textBox2.place(x=160, y=100, width=100, height=30)
+
 # run
 win.mainloop()
