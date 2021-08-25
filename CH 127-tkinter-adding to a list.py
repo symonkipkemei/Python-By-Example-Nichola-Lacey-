@@ -13,17 +13,14 @@ from tkinter import *
 # commands
 def add():
     userNum = textBox1.get()
-    userNum = int(userNum)
-    answer = (textBox2["text"])
-    num = int(answer)
-    total = num + userNum
-    textBox2["text"] = total
-
+    textBox2.insert(END, userNum)
+    textBox1.delete(0, END)
+    textBox2["justify"] = "left"
 
 def reset():
-    total = 0
+    textBox2.delete(0, END)
     textBox1.delete(0, END)
-    textBox2["text"] = total
+
 
 
 # create an instance of tkinter
@@ -40,7 +37,7 @@ label = Label(text="Enter your name")
 label.place(x=50, y=50, width=200, height=50)
 
 # Text box 1 (Data Entry)
-textBox1 = Entry(text=0)
+textBox1 = Entry(text="")
 textBox1.place(x=250, y=50, width=300, height=50)
 textBox1["justify"] = "center"
 
@@ -49,8 +46,14 @@ button1 = Button(text="Add", command=add)
 button1.place(x=600, y=50, width=150, height=50)
 
 # Reset button
-button2 = Button(text="Reset", command=add)
+button2 = Button(text="Reset", command=reset)
 button2.place(x=750, y=50, width=150, height=50)
+
+# textbox2 (list display)
+textBox2 = Listbox()
+textBox2.place(x=250, y=150, width=300, height=50)
+textBox2["justify"] = "center"
+
 
 # run
 win.mainloop()
