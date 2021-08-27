@@ -50,3 +50,11 @@
 # This is really fascinating
 # I am good judge, a funny one so to say....
 # Looking forward to some GUI...This will be great!
+
+
+# AAS 03 THE FUTURE IS BRIGHT
+
+# The future belongs to thos who can learn , unlearn and relearn.
+# The future lies in the technology and do not hesitate my brother
+# Brace yourself and be ready to go the extra mile.
+# One day at a time as we rebuild and work on ourselves
