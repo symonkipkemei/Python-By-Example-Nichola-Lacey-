@@ -58,3 +58,10 @@
 # The future lies in the technology and do not hesitate my brother
 # Brace yourself and be ready to go the extra mile.
 # One day at a time as we rebuild and work on ourselves
+
+
+# AAS 04 CONQUEROR
+
+# We are back from a period of despair an ready to conquer the world!
+# It is going to a be a race of thoughts actions, skills and content
+# and learning just like  how  our DNA is structured
