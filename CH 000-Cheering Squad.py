@@ -65,3 +65,17 @@
 # We are back from a period of despair an ready to conquer the world!
 # It is going to a be a race of thoughts actions, skills and content
 # and learning just like  how  our DNA is structured
+
+
+# AAS 05 BACKLOGS-211103
+# It's been a  break and  half trying to fight the insurrection of financial instability.
+# I was able to settle my debts here and there, I am a free man so to speak.
+# The mental tax imposed by poverty is coming to an end and what a better way to celebrate  by
+# doing more coding and developing my ideas into reality
+
+
+# I forgot to mention
+# Formbot has been a great success so far
+# I managed to double it activity and optimise the traffic around
+# Looking forward to more of this.
+
